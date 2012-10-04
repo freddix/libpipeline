@@ -1,12 +1,12 @@
 Summary:	A pipeline manipulation library
 Name:		libpipeline
-Version:	1.2.1
-Release:	2
+Version:	1.2.2
+Release:	1
 License:	GPL v3+
 Group:		Development/Libraries
 URL:		http://libpipeline.nongnu.org/
 Source0:	http://download.savannah.gnu.org/releases/libpipeline/%{name}-%{version}.tar.gz
-# Source0-md5:	20896c919eca4acb3d2f13012fb7ba02
+# Source0-md5:	4367a3f598d171fd43dfa8620ed16d55
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -55,8 +55,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
+%post	-p /usr/sbin/ldconfig
+%postun	-p /usr/sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
