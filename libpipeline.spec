@@ -1,12 +1,12 @@
 Summary:	A pipeline manipulation library
 Name:		libpipeline
-Version:	1.2.6
+Version:	1.3.0
 Release:	1
 License:	GPL v3+
 Group:		Development/Libraries
 URL:		http://libpipeline.nongnu.org/
 Source0:	http://download.savannah.gnu.org/releases/libpipeline/%{name}-%{version}.tar.gz
-# Source0-md5:	6d1d51a5dc102af41e0d269d2a31e6f9
+# Source0-md5:	242428c01dca255cdcb2195073a9c6ed
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
