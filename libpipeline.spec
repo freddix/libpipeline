@@ -1,12 +1,12 @@
 Summary:	A pipeline manipulation library
 Name:		libpipeline
-Version:	1.3.0
+Version:	1.3.1
 Release:	1
 License:	GPL v3+
 Group:		Development/Libraries
-URL:		http://libpipeline.nongnu.org/
 Source0:	http://download.savannah.gnu.org/releases/libpipeline/%{name}-%{version}.tar.gz
-# Source0-md5:	242428c01dca255cdcb2195073a9c6ed
+# Source0-md5:	31a34830c0f8a6d40ee373df51f04baa
+URL:		http://libpipeline.nongnu.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -31,8 +31,6 @@ develop programs that use libpipeline library.
 %prep
 %setup -q
 
-sed -i "/gets is a security hole/d" gnulib/lib/stdio.in.h
-
 %build
 %{__libtoolize}
 %{__aclocal} -I m4 -I gnulib/m4
@@ -46,8 +44,6 @@ sed -i "/gets is a security hole/d" gnulib/lib/stdio.in.h
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
-	prefix=%{_prefix} \
-	INSTALL='install -p' \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libpipeline.la
